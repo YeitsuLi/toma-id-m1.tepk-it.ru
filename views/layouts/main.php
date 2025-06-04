@@ -25,6 +25,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <head>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, input, textarea, button {
+            font-family: 'SegoeUI', sans-serif!important;
+            background-color: #FFFFFF;
+
+        }
+    </style>
+
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
