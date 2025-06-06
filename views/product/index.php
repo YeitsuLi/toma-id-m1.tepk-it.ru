@@ -5,6 +5,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
+use yii\widgets\ListView;
 
 /** @var yii\web\View $this */
 /** @var app\models\ProductSearch $searchModel */
@@ -20,6 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Создать новое поле "Продукция"', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD; border:none']) ?>
     </p>
+
+
 
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -41,6 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ['attribute'=>'name',
                 'label'=>'Название продукта',],
+
             ['attribute'=>'article',
                 'label'=>'Артикул',],
             ['attribute'=>'min_price_partner',

@@ -45,7 +45,13 @@ class Product extends \yii\db\ActiveRecord
         ];
     }
 
-
+    public function FuncController()
+    {
+        $workshop = \app\models\ProductWorkshop::find()
+            ->where(['product_id' => $this->id_product])
+            ->one();
+        return $workshop ? $workshop->time_craft . ' ч' : '—';
+    }
 
     /**
      * {@inheritdoc}

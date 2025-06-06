@@ -41,6 +41,7 @@ class ProductWorkshop extends \yii\db\ActiveRecord
         ];
     }
 
+
     /**
      * {@inheritdoc}
      */
