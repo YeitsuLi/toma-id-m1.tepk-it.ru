@@ -17,7 +17,7 @@ $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/comfort.ico')]);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/comfort.ico')]); //замененная иконка на иконку по стилю
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             background-color: #FFFFFF;
 
         }
-    </style>
+    </style>// стиль для шрифта на сайте строго по приложению 2
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -47,7 +47,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Продукция', 'url' => ['/views/product/index.php']],
+            ['label' => 'Продукция', 'url' => ['product/index']], //перемещение по вкладкам на веб приложении (заголовки в хедере)
+            ['label' => 'Реализация цехов и продуктов', 'url' => ['product-workshop/index']],
+            ['label' => 'Список цехов', 'url' => ['workshop/index']],
             Yii::$app->user->isGuest
                 ? ['label' => '', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
@@ -77,7 +79,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
         <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; Комфорт <?= date('Y') ?></div>
+            <div class="col-md-6 text-center text-md-start">&copy; Комфорт <?= date('Y') ?></div> //в футере изменена корпорация под стиль
             <div class="col-md-6 text-center text-md-end"><?= Yii::powered() ?></div>
         </div>
     </div>
