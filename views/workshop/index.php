@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\WorkshopSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Workshops';
+$this->title = 'Список цехов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="workshop-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Workshop', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD; border:none']) ?>
+        <?= Html::a('Создать новое поле "Цех"', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD; border:none']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

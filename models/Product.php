@@ -45,6 +45,8 @@ class Product extends \yii\db\ActiveRecord
         ];
     }
 
+
+
     /**
      * {@inheritdoc}
      */

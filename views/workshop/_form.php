@@ -14,7 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'workshop_type_id')->textInput() ?>
+    <?= $form->field($model, 'workshop_type_id')->dropDownList(
+        \yii\helpers\ArrayHelper::map(
+            \app\models\WorkshopType::find()->all(),
+            'id_workshop_type', 'name'
+        ),
+        ['prompt' => 'Выберите тип'] //Выпадающий список при создании нового поля для быстрого выбора существующего типа
+    ) ?>
 
     <?= $form->field($model, 'count_people')->textInput() ?>
 

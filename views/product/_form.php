@@ -32,7 +32,7 @@ use yii\widgets\ActiveForm;
             \app\models\MaterialType::find()->all(),
             'id_material_type', 'name'
         ),
-        ['prompt' => 'Выберите тип']
+        ['prompt' => 'Выберите тип'] //Выпадающий список при создании нового поля для быстрого выбора существующего типа
     ) ?>
 
     <div class="form-group">

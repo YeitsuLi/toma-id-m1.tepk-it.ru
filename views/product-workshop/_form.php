@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
             \app\models\Product::find()->all(),
             'id_product', 'name'
         ),
-        ['prompt' => 'Выберите тип']
+        ['prompt' => 'Выберите тип'] //Выпадающий список при создании нового поля для быстрого выбора существующего типа
     ) ?>
 
     <?= $form->field($model, 'workshop_id')->dropDownList(
@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
             \app\models\Workshop::find()->all(),
             'id_workshop', 'name'
         ),
-        ['prompt' => 'Выберите тип']
+        ['prompt' => 'Выберите тип'] //Выпадающий список при создании нового поля для быстрого выбора существующего типа
     ) ?>
 
     <?= $form->field($model, 'time_craft')->textInput(['maxlength' => true]) ?>
