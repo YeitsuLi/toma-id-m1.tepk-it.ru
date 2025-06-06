@@ -30,11 +30,25 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id_product',
-            'product_type_id',
+            [
+                'attribute' => 'product_type_id',
+                'value' => function($model) {
+                    return $model->productType ? $model->productType->name : '—';
+                },
+                'label' => 'Тип продукта',
+            ],
+
             'name',
             'article',
             'min_price_partner',
-            'material_type_id',
+            [
+                'attribute' => 'material_type_id',
+                'value' => function($model) {
+                    return $model->materialType ? $model->materialType->name : '—';
+                },
+                'label' => 'Тип материала',
+            ],
+
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Product $model, $key, $index, $column) {
