@@ -17,7 +17,7 @@ $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/comfort.ico')]);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
     <style>
         body, h1, h2, h3, h4, h5, h6, input, textarea, button {
-            font-family: 'SegoeUI', sans-serif!important;
+            font-family: 'Candara', sans-serif!important;
             background-color: #FFFFFF;
 
         }
@@ -47,7 +47,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'заменить потом', 'url' => ['/site/index']],
+            ['label' => 'Продукция', 'url' => ['/views/product/index.php']],
             Yii::$app->user->isGuest
                 ? ['label' => '', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
@@ -77,7 +77,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
         <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; Заменить потом тоже <?= date('Y') ?></div>
+            <div class="col-md-6 text-center text-md-start">&copy; Комфорт <?= date('Y') ?></div>
             <div class="col-md-6 text-center text-md-end"><?= Yii::powered() ?></div>
         </div>
     </div>
