@@ -47,10 +47,15 @@ class Product extends \yii\db\ActiveRecord
 
     public function FuncController()
     {
-        $workshop = \app\models\ProductWorkshop::find()
+        $workshops = \app\models\ProductWorkshop::find()
             ->where(['product_id' => $this->id_product])
-            ->one();
-        return $workshop ? $workshop->time_craft . ' ч' : '—';
+            ->all();
+        $total = 0;
+        foreach ($workshops as $w) {
+            $total += (float)$w->time_craft;
+        }
+        return ceil($total);
+
     }
 
     /**

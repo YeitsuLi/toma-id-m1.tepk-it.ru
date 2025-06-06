@@ -30,6 +30,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             font-family: 'Candara', sans-serif!important;
             background-color: #FFFFFF;
         }
+        .bg {
+            background-color: #D2DFFF !important;
+        }
+
     </style>
 
 </head>
@@ -41,7 +45,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     NavBar::begin([
         'brandLabel' => Html::img('@web/comfort.ico', ['alt' => 'Логотип', 'style' => 'height:30px;']) . ' ' . Yii::$app->name, //РЕАЛИЗАЦИЯ ЛОГОТИПА НА ХЕДЕРЕ ВЕБ ПРИЛОЖЕНИЯ
         'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top'],
+
+        'options' => ['class' => 'navbar-expand-md navbar-white bg fixed-top'],
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],

@@ -22,6 +22,16 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Создать новое поле "Продукция"', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD; border:none']) ?>
     </p>
 
+    <?= ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemView' => '_product_card',
+        'viewParams' => [
+            'somethingExtra' => 'some value',
+        ],
+        'layout' => "{items}\n{pager}",
+        'options' => ['class' => 'row'],
+        'itemOptions' => ['class' => 'col-md-6 mb-4'],
+    ]) ?>
 
 
 
@@ -44,7 +54,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ['attribute'=>'name',
                 'label'=>'Название продукта',],
-
+            [
+                'label' => 'Время изготовления (ч)',
+                'value' => function($model) {
+                    return $model->FuncController();
+                },
+            ],
             ['attribute'=>'article',
                 'label'=>'Артикул',],
             ['attribute'=>'min_price_partner',
