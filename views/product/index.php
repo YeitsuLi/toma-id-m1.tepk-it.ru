@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_product',
+            //'id_product',
             [
                 'attribute' => 'product_type_id',
                 'value' => function($model) {
@@ -38,9 +38,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Тип продукта',
             ],
 
-            'name',
-            'article',
-            'min_price_partner',
+            ['attribute'=>'name',
+                'label'=>'Название продукта',],
+            ['attribute'=>'article',
+                'label'=>'Артикул',],
+            ['attribute'=>'min_price_partner',
+                'label'=>'Минимальная цена для партнеров',], //РЕАЛИЗАЦИЯ РУСИФИЦИРОВАНИЯ СТОЛБЦОВ НА СТРАНИЦАХ ВЕБ ПРИЛОЖЕНИЯ
             [
                 'attribute' => 'material_type_id',
                 'value' => function($model) {

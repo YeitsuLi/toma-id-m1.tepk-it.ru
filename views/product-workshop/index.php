@@ -29,10 +29,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_product_workshop',
-            'product_id',
-            'workshop_id',
-            'time_craft',
+            //'id_product_workshop',
+            [
+                'attribute' => 'product_id',
+                'value' => function($model) {
+                    return $model->product ? $model->product->name : '—';
+                },
+                'label' => 'Продукт',
+            ],
+
+            [
+                'attribute' => 'workshop_id',
+                'value' => function($model) {
+                    return $model->workshop ? $model->workshop->name : '—';
+                },
+                'label' => 'Цех',
+            ],
+
+            ['attribute'=>'time_craft',
+                'label'=>'Время производства',],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, ProductWorkshop $model, $key, $index, $column) {
