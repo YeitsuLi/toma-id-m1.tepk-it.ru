@@ -48,9 +48,9 @@ class ProductWorkshop extends \yii\db\ActiveRecord
     {
         return [
             'id_product_workshop' => 'Id Product Workshop',
-            'product_id' => 'Product ID',
-            'workshop_id' => 'Workshop ID',
-            'time_craft' => 'Time Craft',
+            'product_id' => 'Продукт',
+            'workshop_id' => 'Цех',
+            'time_craft' => 'Время производства',
         ];
     }
 

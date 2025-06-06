@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 
             ['attribute'=>'time_craft',
-                'label'=>'Время производства (в часах)',],
+                'label'=>'Время производства',],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, ProductWorkshop $model, $key, $index, $column) {

@@ -54,11 +54,11 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'id_product' => 'Id Product',
-            'product_type_id' => 'Product Type ID',
-            'name' => 'Name',
-            'article' => 'Article',
-            'min_price_partner' => 'Min Price Partner',
-            'material_type_id' => 'Material Type ID',
+            'product_type_id' => 'Тип продукта',
+            'name' => 'Название продукта',
+            'article' => 'Артикул',
+            'min_price_partner' => 'Минимальная цена для партнеров',
+            'material_type_id' => 'Тип материала',
         ];
     }
 

@@ -47,9 +47,9 @@ class Workshop extends \yii\db\ActiveRecord
     {
         return [
             'id_workshop' => 'Id Workshop',
-            'name' => 'Name',
-            'workshop_type_id' => 'Workshop Type ID',
-            'count_people' => 'Count People',
+            'name' => 'Название цеха',
+            'workshop_type_id' => 'Тип цеха',
+            'count_people' => 'Количество людей',
         ];
     }
 
